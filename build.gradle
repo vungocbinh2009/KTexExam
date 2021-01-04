@@ -1,0 +1,51 @@
+buildscript {
+    repositories {
+        jcenter()
+    }
+}
+
+plugins {
+    id 'org.jetbrains.kotlin.jvm' version '1.4.21'
+    id "com.jfrog.bintray" version "1.8.5"
+    id 'maven-publish'
+    id 'java'
+}
+
+group = 'com.binh.library'
+version = '0.1'
+
+repositories {
+    jcenter()
+    mavenCentral()
+}
+
+dependencies {
+
+}
+
+bintray {
+    user = BINTRAY_USERNAME
+    key = BINTRAY_KEY
+    pkg {
+        repo = 'Library'
+        name = 'com.binh.ktexexam'
+        licenses = ['Apache-2.0']
+        version {
+            name = '0.10'
+        }
+    }
+    configurations = ['archives']
+    publications = ['MyPublication']
+}
+
+publishing {
+    publications {
+        MyPublication(MavenPublication) {
+            from components.java
+            groupId = 'org.binh.ktexexam'
+            artifactId = 'KTexExam'
+            version = '0.1'
+        }
+    }
+}
+
