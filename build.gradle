@@ -14,7 +14,7 @@ plugins {
 }
 
 group = 'com.binh.ktexexam'
-version = '0.2'
+version = '0.3'
 
 repositories {
     jcenter()
@@ -33,7 +33,7 @@ bintray {
         name = 'com.binh.ktexexam'
         licenses = ['Apache-2.0']
         version {
-            name = '0.2'
+            name = '0.3'
         }
         vcsUrl = 'https://github.com/vungocbinh2009/KTexExam'
     }
@@ -62,13 +62,30 @@ def pomConfig = {
     }
 }
 
+task javadocJar(type: Jar, dependsOn: javadoc) {
+    classifier = 'javadoc'
+    from javadoc.destinationDir
+}
+
+task sourcesJar(type: Jar, dependsOn: classes) {
+    classifier = 'sources'
+    from sourceSets.main.allSource
+}
+
+artifacts {
+    archives javadocJar
+    archives sourcesJar
+}
+
 publishing {
     publications {
         MyPublication(MavenPublication) {
             from components.java
+            artifact sourcesJar
+            artifact javadocJar
             groupId = 'com.binh.ktexexam'
             artifactId = 'KTexExam'
-            version = '0.2'
+            version = '0.3'
             pom.withXml {
                 def root = asNode()
                 root.appendNode('description', 'A simple library to create ' +
@@ -80,4 +97,6 @@ publishing {
         }
     }
 }
+
+
 
