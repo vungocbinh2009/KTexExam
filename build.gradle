@@ -7,13 +7,14 @@ buildscript {
 plugins {
     id 'org.jetbrains.kotlin.jvm' version '1.4.21'
     id "com.jfrog.bintray" version "1.8.5"
+    id 'maven'
     id 'maven-publish'
     id 'java'
     id "org.jetbrains.dokka" version "1.4.20"
 }
 
-group = 'com.binh.library'
-version = '0.1'
+group = 'com.binh.ktexexam'
+version = '0.2'
 
 repositories {
     jcenter()
@@ -32,20 +33,50 @@ bintray {
         name = 'com.binh.ktexexam'
         licenses = ['Apache-2.0']
         version {
-            name = '0.1'
+            name = '0.2'
         }
+        vcsUrl = 'https://github.com/vungocbinh2009/KTexExam'
     }
     configurations = ['archives']
     publications = ['MyPublication']
+}
+
+def pomConfig = {
+    licenses {
+        license {
+            name "The Apache Software License, Version 2.0"
+            url "http://www.apache.org/licenses/LICENSE-2.0.txt"
+            distribution "repo"
+        }
+    }
+    developers {
+        developer {
+            id "vungocbinh2009"
+            name "Vu Ngoc Binh"
+            email "vungocbinh@protonmail.com"
+        }
+    }
+
+    scm {
+        url "https://github.com/vungocbinh2009/KTexExam"
+    }
 }
 
 publishing {
     publications {
         MyPublication(MavenPublication) {
             from components.java
-            groupId = 'org.binh.ktexexam'
+            groupId = 'com.binh.ktexexam'
             artifactId = 'KTexExam'
-            version = '0.1'
+            version = '0.2'
+            pom.withXml {
+                def root = asNode()
+                root.appendNode('description', 'A simple library to create ' +
+                        'exam')
+                root.appendNode('name', 'KTexExam')
+                root.appendNode('url', 'https://github.com/vungocbinh2009/KTexExam')
+                root.children().last() + pomConfig
+            }
         }
     }
 }
