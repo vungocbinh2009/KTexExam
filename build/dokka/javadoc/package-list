@@ -1,0 +1,9 @@
+$dokka.format:javadoc-v1
+$dokka.linkExtension:html
+$dokka.location:////PointingToDeclaration/[root]/package-summary.html
+$dokka.location:/mainKt///PointingToDeclaration/[root]/mainKt.html
+$dokka.location:latex/LatexQuestion.Companion///PointingToDeclaration/latex/LatexQuestion.Companion.html
+builder
+core
+latex
+

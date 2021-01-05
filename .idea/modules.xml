@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/KotlinExam.iml" filepath="$PROJECT_DIR$/.idea/modules/KotlinExam.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/KotlinExam.main.iml" filepath="$PROJECT_DIR$/.idea/modules/KotlinExam.main.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/KotlinExam.test.iml" filepath="$PROJECT_DIR$/.idea/modules/KotlinExam.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/KTexExam.main.iml" filepath="$PROJECT_DIR$/.idea/modules/KTexExam.main.iml" />
     </modules>
   </component>
 </project>

@@ -1,7 +1,5 @@
 package latex
 
-import java.io.File
-
 /**
  * This class allow user print exam
  * [preamble]: Preamble in latex file
@@ -10,11 +8,11 @@ import java.io.File
  * [footer] Text add after print answer list
  */
 class LatexExamPaper(val preamble: String,val header: String, val questionList:
-List<LatexQuestion>, val footer: String) {
+List<LatexQuestion>, val footer: String): LatexPaper {
     /**
      * Generate tex code to export tex file
      */
-    private fun generateTexString(): String {
+    override fun generateLatexString(): String {
         val examString = printquestionList()
         val questionPreamble = LatexQuestion.getPreamble()
         return """
@@ -28,24 +26,6 @@ List<LatexQuestion>, val footer: String) {
             |    $footer
             |\end{document}
         """.trimMargin()
-    }
-
-    /**
-     * Export pdf file from tex file to [fileDir]
-     */
-    fun exportPdfFile(fileDir: String) {
-        exportTexFile(fileDir)
-        Runtime.getRuntime().exec("pdflatex $fileDir")
-    }
-
-    /**
-     * Export tex file to [fileDir]
-     */
-    fun exportTexFile(fileDir: String) {
-        val content = generateTexString()
-        File(fileDir).bufferedWriter().use {
-            it.write(content)
-        }
     }
 
     /**

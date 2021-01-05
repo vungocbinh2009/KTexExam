@@ -9,6 +9,7 @@ plugins {
     id "com.jfrog.bintray" version "1.8.5"
     id 'maven-publish'
     id 'java'
+    id "org.jetbrains.dokka" version "1.4.20"
 }
 
 group = 'com.binh.library'
@@ -20,7 +21,7 @@ repositories {
 }
 
 dependencies {
-
+    dokkaHtmlPlugin("org.jetbrains.dokka:kotlin-as-java-plugin:1.4.20")
 }
 
 bintray {
