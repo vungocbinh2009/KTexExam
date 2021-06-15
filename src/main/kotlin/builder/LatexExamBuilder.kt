@@ -132,7 +132,7 @@ class Preamble {
      */
     private var fontSize: Int = 12
     /**
-     * Các setup ở phần preamble.
+     * reamble config list
      */
     private val configList = mutableListOf<String>()
 

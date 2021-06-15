@@ -1,0 +1,20 @@
+---
+title: latex -
+---
+//[KTexExam](../index.md)/[latex](index.md)
+
+
+
+# Package latex  
+
+
+## Types  
+  
+|  Name|  Summary| 
+|---|---|
+| <a name="latex/LatexExamAnswer///PointingToDeclaration/"></a>[LatexExamAnswer](-latex-exam-answer/index.md)| <a name="latex/LatexExamAnswer///PointingToDeclaration/"></a>[jvm]  <br>Content  <br>class [LatexExamAnswer](-latex-exam-answer/index.md)(**preamble**: [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html), **header**: [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html), **questionList**: [List](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html)<[LatexQuestion](-latex-question/index.md)>, **footer**: [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)) : [LatexPaper](-latex-paper/index.md)  <br>More info  <br>This class allow user print exam answer [preamble](-latex-exam-answer/preamble.md): Preamble in latex file [header](-latex-exam-answer/header.md): Text add before print answer list [questionList](-latex-exam-answer/question-list.md): List of question in this exam [footer](-latex-exam-answer/footer.md) Text add after print answer list  <br><br><br>
+| <a name="latex/LatexExamPaper///PointingToDeclaration/"></a>[LatexExamPaper](-latex-exam-paper/index.md)| <a name="latex/LatexExamPaper///PointingToDeclaration/"></a>[jvm]  <br>Content  <br>class [LatexExamPaper](-latex-exam-paper/index.md)(**preamble**: [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html), **header**: [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html), **questionList**: [List](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html)<[LatexQuestion](-latex-question/index.md)>, **footer**: [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)) : [LatexPaper](-latex-paper/index.md)  <br>More info  <br>This class allow user print exam [preamble](-latex-exam-paper/preamble.md): Preamble in latex file [header](-latex-exam-paper/header.md): Text add before print answer list [questionList](-latex-exam-paper/question-list.md): List of question in this exam [footer](-latex-exam-paper/footer.md) Text add after print answer list  <br><br><br>
+| <a name="latex/LatexExamSolution///PointingToDeclaration/"></a>[LatexExamSolution](-latex-exam-solution/index.md)| <a name="latex/LatexExamSolution///PointingToDeclaration/"></a>[jvm]  <br>Content  <br>class [LatexExamSolution](-latex-exam-solution/index.md)(**preamble**: [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html), **header**: [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html), **questionList**: [List](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html)<[LatexQuestion](-latex-question/index.md)>, **footer**: [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)) : [LatexPaper](-latex-paper/index.md)  <br>More info  <br>This class allow user print exam solution.  <br><br><br>
+| <a name="latex/LatexPaper///PointingToDeclaration/"></a>[LatexPaper](-latex-paper/index.md)| <a name="latex/LatexPaper///PointingToDeclaration/"></a>[jvm]  <br>Content  <br>interface [LatexPaper](-latex-paper/index.md)  <br>More info  <br>This interface help user generate tex file and pdf file.  <br><br><br>
+| <a name="latex/LatexQuestion///PointingToDeclaration/"></a>[LatexQuestion](-latex-question/index.md)| <a name="latex/LatexQuestion///PointingToDeclaration/"></a>[jvm]  <br>Content  <br>class [LatexQuestion](-latex-question/index.md)(**question**: [Question](../core/-question/index.md), **answerColumn**: [Int](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html))  <br>More info  <br>This class wrap [Question](../core/-question/index.md) class to print question in latex [question](-latex-question/question.md): Question content answerColumn: number of column when print question's answer  <br><br><br>
+

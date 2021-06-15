@@ -1,0 +1,8 @@
+$dokka.format:jekyll-v1
+$dokka.linkExtension:md
+$dokka.location:////PointingToDeclaration/[root]/index.md
+$dokka.location://main/#/PointingToDeclaration/[root]/main.md
+builder
+core
+latex
+
