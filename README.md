@@ -66,8 +66,7 @@ inside Kotlin script
 3. Enable it!. Now you get Latex syntax highlighting inside all method in 
    class LatexExamBuilder. Yayyy!
 
-(You can also add other pattern, using method in this folder: https://github.
-com/JetBrains/intellij-community/tree/master/java/java-psi-api/src/com/intellij/patterns)
+(You can also add other pattern, using method in this folder: https://github.com/JetBrains/intellij-community/tree/master/java/java-psi-api/src/com/intellij/patterns)
 ## Contribution.
 Contribution are welcome. Create a pull request.
 ## Buy me a coffee.
